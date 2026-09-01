@@ -1,14 +1,3 @@
-"""
-Deterministic binary verifier for Task_06, matching instruction.md's
-"Success criteria (evaluated automatically)" exactly:
-
-  1. v1_divergence_report.json shows total divergence <= 1 across all 3 requests.
-  2. v2_divergence_report.json shows total divergence >= 3 across all 3 requests.
-  3. persona_v2.md is present, under the word limit, and none of its trait
-     descriptions match a list of banned generic adjectives.
-
-Exit 0 on pass, non-zero on failure. No network access.
-"""
 import json
 import re
 import sys

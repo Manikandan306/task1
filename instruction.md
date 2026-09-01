@@ -44,15 +44,3 @@
 You have 1800 seconds to complete this task.
 
 
-del app\personas\persona_v2.md
-rmdir /s /q app\fixtures\responses_v2
-rmdir /s /q app\scoring
-rmdir /s /q app\output
-
-docker build -t task01 .
-
-docker run -v "%cd%\tests:/app_tests" -v "%cd%\app:/app" task06 python3 /app_tests/eval.py
-
-docker run -v "%cd%\solution:/app_solution" -v "%cd%\app:/app" task06 python3 /app_solution/solve.py
-
-docker run -v "%cd%\tests:/app_tests" -v "%cd%\app:/app" task06 python3 /app_tests/eval.py

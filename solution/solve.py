@@ -1,17 +1,3 @@
-"""
-Golden solution: deterministically writes all deliverables required by
-instruction.md into /app, then runs check_markers.py to produce both
-divergence reports. Fully self-contained -- no external golden-answer
-directory required, so this script works standalone in any fresh
-checkout of the repo.
-
-Writes:
-  1. app/scoring/check_markers.py
-  2. app/personas/persona_v2.md
-  3. app/fixtures/responses_v2/req{1,2,3}_v2.md
-  4. app/output/v1_divergence_report.json   (v1 vs alt, from given fixtures)
-  5. app/output/v2_divergence_report.json   (v2 vs alt)
-"""
 import json
 import sys
 from pathlib import Path
