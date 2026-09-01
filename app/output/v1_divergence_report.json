@@ -1,0 +1,50 @@
+[
+  {
+    "request_id": "req1",
+    "markers_a": {
+      "input_validation": false,
+      "has_tests": false,
+      "clarifying_question": false,
+      "multi_function_decomposition": false
+    },
+    "markers_b": {
+      "input_validation": false,
+      "has_tests": false,
+      "clarifying_question": false,
+      "multi_function_decomposition": false
+    },
+    "divergence_count": 0
+  },
+  {
+    "request_id": "req2",
+    "markers_a": {
+      "input_validation": true,
+      "has_tests": false,
+      "clarifying_question": false,
+      "multi_function_decomposition": false
+    },
+    "markers_b": {
+      "input_validation": true,
+      "has_tests": false,
+      "clarifying_question": false,
+      "multi_function_decomposition": false
+    },
+    "divergence_count": 0
+  },
+  {
+    "request_id": "req3",
+    "markers_a": {
+      "input_validation": false,
+      "has_tests": false,
+      "clarifying_question": false,
+      "multi_function_decomposition": true
+    },
+    "markers_b": {
+      "input_validation": false,
+      "has_tests": false,
+      "clarifying_question": false,
+      "multi_function_decomposition": true
+    },
+    "divergence_count": 0
+  }
+]
