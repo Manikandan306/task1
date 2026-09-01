@@ -1,18 +1,7 @@
-"""
-check_markers.py
-
-Checks 4 simple behavioral markers in a response file's text,
-and counts how many differ between two responses.
-"""
-
 import json
 import sys
 
-
-# ---------- Marker check functions ----------
-
 def m_input_validation(text):
-    # Check if any of these common validation phrases appear anywhere
     return ("raise ValueError" in text) or ("isinstance(" in text) or ("if not " in text)
 
 
@@ -22,7 +11,7 @@ def m_has_tests(text):
 
 def m_clarifying_question(text):
     if "```" in text:
-        prefix = text.split("```")[0]   # everything BEFORE the first code block
+        prefix = text.split("```")[0]   
     else:
         prefix = text
     return "?" in prefix
@@ -37,7 +26,6 @@ def m_multi_function_decomposition(text):
     return def_count >= 2
 
 
-# ---------- Registry of all markers ----------
 
 MARKERS = {
     "input_validation": m_input_validation,
@@ -47,7 +35,6 @@ MARKERS = {
 }
 
 
-# ---------- Core logic ----------
 
 def extract_markers(text):
     result = {}
@@ -80,8 +67,6 @@ def score_pair(path_a, path_b, request_id):
     }
 
 
-# ---------- Batch runner: score all 3 requests, save JSON ----------
-
 def run_all(folder_a, suffix_a, folder_b, suffix_b, output_path):
     all_results = []
 
@@ -97,8 +82,6 @@ def run_all(folder_a, suffix_a, folder_b, suffix_b, output_path):
         json.dump(all_results, f, indent=2)
 
     print(json.dumps(all_results, indent=2))
-
-# ---------- Run from command line ----------
 
 if __name__ == "__main__":
     folder_a = sys.argv[1]

@@ -1,4 +1,4 @@
-model model system andtor for Duplication
+# Request 3: Refactor for Duplication
 
 These two functions share a lot of logic. Refactor to reduce duplication:
 
